@@ -1,8 +1,13 @@
-import { Wrapper } from './Content.styles'
+import { ContentLimit, Wrapper } from './Content.styles'
+import Introduction from './components/Introduction/Introduction'
 
 function Content() {
   return (
-    <Wrapper>Content</Wrapper>
+    <Wrapper>
+      <ContentLimit>
+        <Introduction />
+      </ContentLimit>
+    </Wrapper>
   )
 }
 

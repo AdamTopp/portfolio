@@ -11,6 +11,9 @@ function App() {
     margin: 0;
     background-color: #84bb79;
   }
+  h1, h2, h3, h4 {
+    margin: 0;
+  }
 `;
 
   return (
