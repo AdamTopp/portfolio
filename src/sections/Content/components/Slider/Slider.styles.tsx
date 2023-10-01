@@ -1,14 +1,5 @@
 import styled, {keyframes} from "styled-components";
 
-export const Row = styled.div`
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    box-sizing: border-box;
-    overflow: hidden;
-`;
-
 const slide = keyframes`
     from {
         transform: translateX(0);
@@ -23,14 +14,12 @@ export const SliderWrapper = styled.div`
     display: flex;
     justify-content: center;
     height: 100%;
-    font-size: min(8rem, 8vw);
     align-items: center;
+    font-size: min(8rem, 8vw);
     width: 100vw;
-
+    left: -5vw;
     overflow: hidden;
     white-space: nowrap;
-
-    transform: translateY(-6vw);
 `;
 
 export const MarqueeItem = styled.div`
@@ -47,8 +36,7 @@ export const Title = styled.div`
 `;
 
 export const Description = styled.div`
-    font-size: 1.6rem;
-    font-size: min(1.6rem, 1.6vw);
+    font-size: min(2rem, 1.5vw);
 `;
 
 export const PhotoCard = styled.div`
@@ -69,16 +57,26 @@ export const TextBox = styled.div`
     }
 `;
 
-export const GridRow = styled.div`
-    display: grid;
-    flex: 1;
-    max-width: 1500px;
-    margin: 0 6vw;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 6vw;
-    z-index: 1;
+export const Row = styled.div`
+    box-sizing: border-box;
+    padding: 0 5vw;
+    width: 100%;
+    background-color: #4783606a;
+`;
 
-    @media (max-width: 1024px) {
-        grid-template-columns: 1fr;
-    }
+export const Grid = styled.div`
+    display: grid;
+    grid-template-columns: min(25vw, 500px) min(25vw, 500px) min(25vw, 500px);
+    justify-content: space-around;
+    height: 100%;
+    position: relative;
+`;
+
+export const GridItem = styled.div`
+    background-color: coral;
+`;
+
+export const PhotoWrapper = styled.div`
+    background-color: #ff7f509e;
+    aspect-ratio: 6/7;
 `;
