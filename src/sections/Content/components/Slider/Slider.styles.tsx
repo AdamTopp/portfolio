@@ -1,4 +1,4 @@
-import styled, {keyframes} from "styled-components";
+import styled, {css, keyframes} from "styled-components";
 
 const slide = keyframes`
     from {
@@ -39,20 +39,10 @@ export const Description = styled.div`
     font-size: min(2rem, 1.5vw);
 `;
 
-export const PhotoCard = styled.div`
-    border: coral 1px solid;
-    width: 100%;
-    aspect-ratio: 6/7;
-`;
-
 export const TextBox = styled.div`
     &:hover {
         ${Title}, ${Description} {
             color: white;
-        }
-
-        ${PhotoCard} {
-            border: white 1px solid;
         }
     }
 `;
@@ -61,7 +51,6 @@ export const Row = styled.div`
     box-sizing: border-box;
     padding: 0 5vw;
     width: 100%;
-    background-color: #4783606a;
     overflow: hidden;
 `;
 
@@ -73,11 +62,22 @@ export const Grid = styled.div`
     position: relative;
 `;
 
-export const GridItem = styled.div`
-    background-color: coral;
+export const GridItem = styled.div<{ cardActive: boolean }>`
+    z-index: 1;
+    color: grey;
+    ${(props) => props.cardActive && css`
+        & {
+            color: white;
+        }
+    `}
 `;
 
-export const PhotoWrapper = styled.div`
+export const PhotoWrapper = styled(GridItem)`
     background-color: #ff7f509e;
     aspect-ratio: 6/7;
+    ${(props) => props.cardActive && css`
+        & {
+            background-color: green;
+        }
+    `}
 `;
