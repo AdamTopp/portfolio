@@ -7,6 +7,7 @@ export const Wrapper = styled.div`
     width: 100%;
     box-sizing: border-box;
     background-color: #2c2727;
+    border-radius: 0 0 60px 60px;
 `;
 
 export const ContentLimit = styled.div`
