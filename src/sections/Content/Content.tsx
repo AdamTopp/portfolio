@@ -12,7 +12,9 @@ function Content() {
       </ContentLimit>
       <Slider />
       <Technologies />
-      <Experience />
+      <ContentLimit>
+        <Experience />
+      </ContentLimit>
     </Wrapper>
   )
 }
