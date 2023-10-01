@@ -70,11 +70,11 @@ export const PhotoWrapper = styled(GridItem)`
 
 export const Grid = styled.div`
     display: grid;
-    grid-template-columns: min(25vw, 500px) min(25vw, 500px) min(25vw, 500px);
+    grid-template-columns: min(15vw, 500px) min(15vw, 500px) min(15vw, 500px);
     justify-content: space-around;
     height: 100%;
     position: relative;
-    padding: 0 5vw;
+    padding: 0 15vw;
 
     @media (max-width: 1024px) {
         grid-template-columns: min(90vw, 500px);
