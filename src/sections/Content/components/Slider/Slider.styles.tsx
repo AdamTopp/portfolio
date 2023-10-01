@@ -63,6 +63,7 @@ export const Grid = styled.div`
 `;
 
 export const GridItem = styled.div<{ cardActive: boolean }>`
+    transition: all 300ms;
     z-index: 1;
     color: grey;
     ${(props) => props.cardActive && css`
