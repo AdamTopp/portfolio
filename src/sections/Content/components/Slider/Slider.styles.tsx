@@ -19,7 +19,6 @@ export const SliderWrapper = styled.div`
     width: 100vw;
     overflow: hidden;
     white-space: nowrap;
-    left: -5vw;
 `;
 
 export const MarqueeItem = styled.div`
@@ -31,46 +30,32 @@ export const MarqueeItem = styled.div`
 `;
 
 export const Title = styled.div`
-    font-size: 3rem;
-    font-size: min(3rem, 3vw);
+    font-size: min(2.6rem, 2.6vw);
 `;
 
 export const Description = styled.div`
-    font-size: min(2rem, 1.5vw);
-`;
-
-export const TextBox = styled.div`
-    &:hover {
-        ${Title}, ${Description} {
-            color: white;
-        }
-    }
+    font-size: min(1.8rem, 1.8vw);
 `;
 
 export const Row = styled.div`
     box-sizing: border-box;
-    padding: 0 5vw;
     width: 100%;
     overflow: hidden;
 `;
 
-export const Grid = styled.div`
-    display: grid;
-    grid-template-columns: min(25vw, 500px) min(25vw, 500px) min(25vw, 500px);
-    justify-content: space-around;
-    height: 100%;
-    position: relative;
-`;
-
-export const GridItem = styled.div<{ cardActive: boolean }>`
+export const GridItem = styled.div<{ cardActive: boolean, codeSection?: boolean }>`
     transition: all 300ms;
     z-index: 1;
     color: grey;
     ${(props) => props.cardActive && css`
-        & {
-            color: white;
-        }
+        color: white;
     `}
+
+    @media (max-width: 1024px) {
+        ${(props) => props.codeSection && css`
+            order: 3;
+        `}
+    }
 `;
 
 export const PhotoWrapper = styled(GridItem)`
@@ -81,4 +66,39 @@ export const PhotoWrapper = styled(GridItem)`
             background-color: green;
         }
     `}
+`;
+
+export const Grid = styled.div`
+    display: grid;
+    grid-template-columns: min(25vw, 500px) min(25vw, 500px) min(25vw, 500px);
+    justify-content: space-around;
+    height: 100%;
+    position: relative;
+    padding: 0 5vw;
+
+    @media (max-width: 1024px) {
+        grid-template-columns: min(90vw, 500px);
+        grid-row-gap: 60px;
+        ${Title} {
+            font-size: 2.6rem;
+        }
+
+        ${Description} {
+            font-size: 1.8rem;
+        }
+    }
+`;
+
+export const PhotoGrid = styled(Grid)`
+    @media (max-width: 1024px) {
+        padding: 0;
+        justify-content: flex-start;
+        ${PhotoWrapper} {
+            display: none;
+        }
+
+        ${SliderWrapper} {
+            position: initial;
+        }
+    }
 `;
