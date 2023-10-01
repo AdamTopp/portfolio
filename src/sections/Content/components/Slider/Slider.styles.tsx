@@ -17,9 +17,9 @@ export const SliderWrapper = styled.div`
     align-items: center;
     font-size: min(8rem, 8vw);
     width: 100vw;
-    left: -5vw;
     overflow: hidden;
     white-space: nowrap;
+    left: -5vw;
 `;
 
 export const MarqueeItem = styled.div`
@@ -62,6 +62,7 @@ export const Row = styled.div`
     padding: 0 5vw;
     width: 100%;
     background-color: #4783606a;
+    overflow: hidden;
 `;
 
 export const Grid = styled.div`
