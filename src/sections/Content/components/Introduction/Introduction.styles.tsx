@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-    padding-top: 300px;
-    background-color: #4eb88c63;
+    padding: 300px 0;
 `;
 
 export const Grid = styled.h2`

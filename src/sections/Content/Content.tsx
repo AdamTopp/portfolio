@@ -1,5 +1,6 @@
 import { ContentLimit, Wrapper } from './Content.styles'
 import Introduction from './components/Introduction/Introduction'
+import Slider from './components/Slider/Slider'
 
 function Content() {
   return (
@@ -7,6 +8,7 @@ function Content() {
       <ContentLimit>
         <Introduction />
       </ContentLimit>
+      <Slider />
     </Wrapper>
   )
 }
