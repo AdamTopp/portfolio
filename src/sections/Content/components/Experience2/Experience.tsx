@@ -1,11 +1,11 @@
 import React from 'react'
-import { Grid, Column, Wrapper, Row, Year, LeftGroup, Position, Company, Content, Description, Title, Subtitle } from './Experience.styles'
+import { Content, Description, SubTitle, Name, Title, DescriptionWrapper, Column, Wrapper, Row, Year, LeftGroup, Position, Company } from './Experience.styles'
 
 function Experience() {
 
   return (
     <>
-      <Grid>
+      <DescriptionWrapper>
         <Column>
           <Content>
             Currently I’m  working as a Front-end Developer where I breathe new life into our old pages to bring them  up to the newest standards. I was  also responsible for working on topics that required delving deeper into the back-end.
@@ -18,11 +18,11 @@ function Experience() {
           <Title>
             MY STORY AS A
           </Title>
-          <Subtitle>
+          <SubTitle>
             FRONT-END DEV
-          </Subtitle>
+          </SubTitle>
         </Column>
-      </Grid>
+      </DescriptionWrapper>
       <Wrapper>
         <Row>
           <LeftGroup>

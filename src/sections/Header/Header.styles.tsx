@@ -24,7 +24,7 @@ export const ContentWrapper = styled.div<{ paralaxSpeed: string }>`
     
 `;
 
-export const TEMPTitle = styled.h1`
+export const Title = styled.h1`
     font-family: Pathway Gothic One;
     white-space: nowrap;
     color: black;

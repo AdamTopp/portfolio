@@ -1,34 +1,43 @@
 import styled from "styled-components";
 
-export const Grid = styled.div`
-    display: grid;
-    width: 100%;
-    padding: 15vw 5vw 6vw 5vw;
+export const DescriptionWrapper = styled.div`
+    display: flex;
+    justify-content: space-between;
     box-sizing: border-box;
-    grid-template-columns: auto auto;
-    grid-gap: 10vw;
+    padding: 10vw 5vw;
+    margin: 0 auto;
+    gap: 15vw;
 `;
 
 export const Column = styled.div`
-`;
-
-export const Content = styled.div`
-    font-size: min(1.8rem, 1.8vw);
-    text-wrap: balance;
-`;
-
-export const Description = styled(Content)`
-    color: #9A9A9A;
-    font-size: min(1.6rem, 1.6vw);
+    display: flex;
+    flex-direction: column;
 `;
 
 export const Title = styled.div`
     font-size: min(4rem, 4vw);
-    text-align: end;
+    display: inline-block;
+    align-self: flex-end;
     color: white;
+    white-space: nowrap;
 `;
 
-export const Subtitle = styled(Title)`
+export const SubTitle = styled.div`
+    font-size: min(4rem, 4vw);
+    display: inline-block;
+    align-self: flex-end;
+    color: #8B8B8B;
+    white-space: nowrap;
+`;
+
+export const Content = styled.h2`
+    color: #DADADA;
+    font-size: min(2rem, 2vw);
+`;
+
+export const Description = styled.h2`
+    color: #9A9A9A;
+    font-size: min(2rem, 2vw);
 `;
 
 export const Wrapper = styled.div`

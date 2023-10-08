@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { ContentWrapper, SubTitle, TEMPTitle, Wrapper } from './Header.styles'
+import { ContentWrapper, SubTitle, Title, Wrapper } from './Header.styles'
 
 function Header() {
   const [speed, setSpeed] = useState('0px');
@@ -22,9 +22,9 @@ function Header() {
         <SubTitle>
           Do you need a website?
         </SubTitle>
-        <TEMPTitle>
+        <Title>
           Hi I'm Adam
-        </TEMPTitle>
+        </Title>
         <SubTitle>
           Let me help!
         </SubTitle>
