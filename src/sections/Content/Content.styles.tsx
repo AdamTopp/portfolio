@@ -12,5 +12,5 @@ export const Wrapper = styled.div`
 
 export const ContentLimit = styled.div`
     width: 100%;
-    max-width: 1900px;
+    max-width: 1800px;
 `;
