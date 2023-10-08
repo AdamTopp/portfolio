@@ -15,7 +15,7 @@ export const Logos = styled.div`
     margin-top: 150px;
     padding: 20px 0;
     white-space: nowrap;
-    background-color: red;
+    background-color: #641515;
     border-radius: 0 0 60px 60px;
 `;
 

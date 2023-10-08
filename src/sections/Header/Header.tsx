@@ -20,13 +20,13 @@ function Header() {
     <Wrapper>
       <ContentWrapper paralaxSpeed={speed}>
         <SubTitle>
-          Test1
+          Do you need a website?
         </SubTitle>
         <TEMPTitle>
-          Hi Im Adam
+          Hi I'm Adam
         </TEMPTitle>
         <SubTitle>
-          Test1
+          Let me help!
         </SubTitle>
       </ContentWrapper>
     </Wrapper>

@@ -25,22 +25,23 @@ export const ContentWrapper = styled.div<{ paralaxSpeed: string }>`
 `;
 
 export const TEMPTitle = styled.h1`
+    font-family: Pathway Gothic One;
     white-space: nowrap;
     color: black;
     position: relative;
-    font-size: min(14rem, 17vw);
+    font-size: min(19rem, 19vw);
     margin: 0;
+    text-align: center;
 
-    letter-spacing: -7px;
+    letter-spacing: -8px;
     text-transform: uppercase;
     &::before, &::after {
-        content: 'Hi Im Adam';
+        content: "Hi I'm Adam";
         white-space: nowrap;
         display: block;
         position: absolute;
         top:0;
         color: rgba(0, 0, 0, 0);
-        font-size: min(14rem, 17vw);
         -webkit-text-stroke: 1.5px #161616;
         z-index: -1;
     }
@@ -57,4 +58,5 @@ export const TEMPTitle = styled.h1`
 export const SubTitle = styled.h2`
     color: white;
     font-size: min(2rem, 4vw);
+    z-index: 1;
 `;
