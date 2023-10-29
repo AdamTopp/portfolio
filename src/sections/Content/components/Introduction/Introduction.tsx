@@ -7,7 +7,7 @@ function Introduction() {
     <Grid>
       <NameWrapper>
         <Title>
-          Hello, my name is
+          My name is
         </Title>
         <Subtitle>
           Adam Toppmayer

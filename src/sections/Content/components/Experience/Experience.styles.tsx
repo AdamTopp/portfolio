@@ -6,20 +6,20 @@ export const Grid = styled.div`
     padding: 15vw 5vw 6vw 5vw;
     box-sizing: border-box;
     grid-template-columns: auto auto;
-    grid-gap: 10vw;
+    grid-gap: 5vw;
 `;
 
 export const Column = styled.div`
 `;
 
 export const Content = styled.div`
-    font-size: min(1.8rem, 1.8vw);
+    font-size: min(1.5rem, 1.5vw);
     text-wrap: balance;
 `;
 
 export const Description = styled(Content)`
     color: #9A9A9A;
-    font-size: min(1.6rem, 1.6vw);
+    font-size: min(1.3rem, 1.3vw);
 `;
 
 export const Title = styled.div`

@@ -7,17 +7,30 @@ export const Grid = styled.div`
     box-sizing: border-box;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
-    grid-column-gap: 10vw;
+    grid-column-gap: 5vw;
+
+    @media (max-width: 1024px) {
+        grid-template-columns: 1fr;
+    }
 `;
 
 export const NameWrapper = styled.div`
     grid-column: 1;
     grid-row: 1;
+    @media (max-width: 1024px) {
+        grid-column: auto;
+        grid-row: auto;
+    }
 `;
 
 export const ContentWrapper = styled.div`
     grid-column: 2;
     grid-row: 2;
+
+    @media (max-width: 1024px) {
+        grid-column: auto;
+        grid-row: auto;
+    }
 `;
 
 export const Underline = styled.div`
@@ -37,12 +50,12 @@ export const Subtitle = styled(Title)`
 
 export const Content = styled.div`
     color: white;
-    font-size: min(1.8rem, 1.8vw);
+    font-size: min(1.5rem, 1.5vw);
 `;
 
 export const Description = styled(Content)`
     color: #9A9A9A;
-    font-size: min(1.6rem, 1.6vw);
+    font-size: min(1.3rem, 1.3vw);
 `;
 
 export const Pop = styled.span`
@@ -50,33 +63,3 @@ export const Pop = styled.span`
     margin: 0 6px;
     font-size: min(2rem, 2vw);
 `;
-
-
-// export const Wrapper = styled.div`
-//     padding: 300px 0;
-// `;
-
-// export const Grid = styled.h2`
-//     display: grid;
-//     grid-template-columns: 1fr 1fr;
-
-//     @media (max-width: 1024px) {
-//         grid-template-columns: 1fr;
-//     }
-// `;
-
-// export const Title = styled.h2`
-//     color: white;
-// `;
-
-// export const Name = styled.h2`
-//     color: #8B8B8B;
-// `;
-
-// export const Content = styled.h2`
-//     color: #DADADA;
-// `;
-
-// export const Description = styled.h2`
-//     color: #9A9A9A;
-// `;
