@@ -8,8 +8,7 @@ const theme = {
     },
   },
   colors: {
-    red: '#4d171a',
-    // red: '#CF1723',
+    red: '#CF1723',
     white: {
       100: '#fff',
       80: '#dadada',
@@ -19,6 +18,7 @@ const theme = {
       0: '#120F14',
     }
   },
+  maxSize: '1600px'
 };
 
 export default theme;
