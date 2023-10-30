@@ -1,34 +1,25 @@
-import React, { useEffect, useState } from 'react'
-import { ContentWrapper, SubTitle, Title, Wrapper } from './Header.styles'
+import { OutlineWrapper, OutlineTitle, SubTitle, Title, Wrapper } from './Header.styles'
 
-function Header() {
-  const [speed, setSpeed] = useState('0px');
-
-  const handleScroll = () => {
-    const speed = `${window.scrollY * 0.4}px`;
-    setSpeed(speed)
-  }
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [])
-
+const Header = () => {
   return (
     <Wrapper>
-      <ContentWrapper paralaxSpeed={speed}>
-        <SubTitle>
+      <OutlineWrapper>
+        <OutlineTitle>
+          Hi I'm Adam
+        </OutlineTitle>
+        <SubTitle top>
           Do you need a website?
         </SubTitle>
-        <Title>
+      </OutlineWrapper>
+      <Title>Hi I'm Adam</Title>
+      <OutlineWrapper>
+        <OutlineTitle>
           Hi I'm Adam
-        </Title>
+        </OutlineTitle>
         <SubTitle>
           Let me help!
         </SubTitle>
-      </ContentWrapper>
+      </OutlineWrapper>
     </Wrapper>
   )
 }

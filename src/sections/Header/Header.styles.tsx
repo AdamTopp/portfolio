@@ -1,62 +1,54 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import theme from "../../theme";
 
 export const Wrapper = styled.div`
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transform-style: preserve-3d;
-    z-index: -1;
-    background-color: #752121;
     height: 100vh;
-`;
-
-export const ContentWrapper = styled.div<{ paralaxSpeed: string }>`
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transform: translateY(${(props) => props.paralaxSpeed});
-    
+    background-color: ${theme.colors.red};
 `;
 
-export const Title = styled.h1`
-    font-family: Pathway Gothic One;
+export const Title = styled.div`
     white-space: nowrap;
-    color: black;
-    position: relative;
-    font-size: min(19rem, 19vw);
-    margin: 0;
-    text-align: center;
-
+    font-family: ${theme.fonts.family.Anton};
+    font-size: min(350px, 22vw);
+    line-height: 0.9;
     letter-spacing: -8px;
+    color: ${theme.colors.white[0]};
     text-transform: uppercase;
-    &::before, &::after {
-        content: "Hi I'm Adam";
-        white-space: nowrap;
-        display: block;
-        position: absolute;
-        top:0;
-        color: rgba(0, 0, 0, 0);
-        -webkit-text-stroke: 1.5px #161616;
-        z-index: -1;
-    }
-
-    &::before {
-        transform: translateY(calc(min(14rem, 17vw) * -1));
-    }
-
-    &::after {
-        transform: translateY(min(14rem, 17vw));
-    }
 `;
 
-export const SubTitle = styled.h2`
+export const OutlineTitle = styled(Title)`
+    position: relative;
+    font-size: min(350px, 22vw);
+    font-family: ${theme.fonts.family.PathwayGothic};
+    -webkit-text-stroke: 2px ${theme.colors.white[0]};
+    color: transparent;
+    opacity: 35%;
+`;
+
+export const SubTitle = styled.div<{ top?: boolean }>`
+    position: absolute;
+    font-size: min(3vw, 45px);
+    font-family: ${theme.fonts.family.Playfair};
+    letter-spacing: 0;
+    -webkit-text-stroke: 0;
+    white-space: nowrap;
+    text-transform: none;
     color: white;
-    font-size: min(2rem, 4vw);
-    z-index: 1;
+    opacity: 100%;
+
+    ${(props) => props.top ? css`
+        bottom: min(6vw, 80px);
+    ` : css`
+        top: min(6vw, 80px);
+    `}
+`;
+
+export const OutlineWrapper = styled.div`
+    position: relative;
+    display: flex;
+    justify-content: center;
 `;
