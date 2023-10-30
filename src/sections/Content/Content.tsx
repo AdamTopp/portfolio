@@ -1,22 +1,16 @@
-import { ContentLimit, Wrapper } from './Content.styles'
-import Experience from './components/Experience/Experience'
+import { Wrapper } from './Content.styles'
 import Introduction from './components/Introduction/Introduction'
-import PageEnd from './components/PageEnd/PageEnd'
-import Slider from './components/Slider/Slider'
-import Technologies from './components/Technologies/Technologies'
+// import Experience from './components/Experience/Experience'
+// import Slider from './components/Slider/Slider'
+// import Technologies from './components/Technologies/Technologies'
 
 function Content() {
   return (
     <Wrapper>
-      <ContentLimit>
-        <Introduction />
-      </ContentLimit>
-      <Slider />
+      <Introduction />
+      {/* <Slider />
       <Technologies />
-      <ContentLimit>
-        <Experience />
-      </ContentLimit>
-      <PageEnd />
+      <Experience /> */}
     </Wrapper>
   )
 }

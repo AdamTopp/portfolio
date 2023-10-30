@@ -1,65 +1,69 @@
 import styled from "styled-components";
+import theme from "../../../../theme";
 
 export const Grid = styled.div`
-    display: grid;
     width: 100%;
-    padding: 18vw 5vw;
-    box-sizing: border-box;
+    max-width: ${theme.maxSize};
+    padding: 35rem 8rem;
+
+    display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
-    grid-column-gap: 5vw;
-
-    @media (max-width: 1024px) {
-        grid-template-columns: 1fr;
-    }
+    grid-column-gap: 6rem;
 `;
 
-export const NameWrapper = styled.div`
-    grid-column: 1;
-    grid-row: 1;
-    @media (max-width: 1024px) {
-        grid-column: auto;
-        grid-row: auto;
-    }
-`;
-
-export const ContentWrapper = styled.div`
+export const ContentWrapper = styled.section`
+    grid-row: 2;
     grid-column: 2;
-    grid-row: 2;
-
-    @media (max-width: 1024px) {
-        grid-column: auto;
-        grid-row: auto;
-    }
 `;
 
-export const Underline = styled.div`
+export const NameWrapper = styled(ContentWrapper)`
+    grid-row: 1;
     grid-column: 1;
-    grid-row: 2;
-    border-top: 2px solid red;
 `;
 
-export const Title = styled.div`
-    font-size: min(4rem, 4vw);
-    color: white;
+export const Hello = styled.div`
+    font-size: 2.2rem;
+    line-height: 1;
+    text-transform: uppercase;
+    font-family: ${theme.fonts.family.Playfair};
+    color: ${theme.colors.white[60]};
 `;
 
-export const Subtitle = styled(Title)`
-    color: white;
+export const NameContainer = styled(Hello)`
+    font-size: 3.5rem;
+    color: ${theme.colors.white[100]};
+`;
+
+export const Surname = styled.span`
+    position: relative;
+    margin-left: 1rem;
+    z-index: 1;
+
+    &::before {
+        content: url('./Underline.svg');
+        position: absolute;
+        width: 100%;
+        bottom: -1.5rem;
+        z-index: -1;
+    }
 `;
 
 export const Content = styled.div`
-    color: white;
-    font-size: min(1.5rem, 1.5vw);
+    font-size: 1.5rem;
+    line-height: 130%;
+    font-family: ${theme.fonts.family.Alike};
+    color: ${theme.colors.white[80]};
 `;
 
-export const Description = styled(Content)`
-    color: #9A9A9A;
-    font-size: min(1.3rem, 1.3vw);
-`;
+export const Footer = styled.div`
+    width: 70%;
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 2px solid ${theme.colors.white[20]};
 
-export const Pop = styled.span`
-    color: red;
-    margin: 0 6px;
-    font-size: min(2rem, 2vw);
+    font-size: 1.1rem;
+    line-height: 125%;
+    font-family: ${theme.fonts.family.Alike};
+    color: ${theme.colors.white[60]};
 `;

@@ -8,6 +8,7 @@ export const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
     background-color: ${theme.colors.red};
+    cursor: default;
 `;
 
 export const Title = styled.div`
