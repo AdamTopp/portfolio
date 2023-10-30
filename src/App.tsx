@@ -12,7 +12,29 @@ function App() {
       box-sizing: border-box;
       font-family: 'Playfair Display' 'Alike';
     }
+
+    main {
+      max-width: 100vw;
+      overflow-x: hidden;
+    }
+
+    *::after, *::before {
+      display: inline-block;
+    }
+
+    ::-webkit-scrollbar {
+      width: 0;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: red;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: blue;
+    }
   `;
+  
 
   const theme = {
     fonts: {
@@ -40,9 +62,11 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <Header />
-      <Content />
-      <Footer />
+      <main>
+        <Header />
+        <Content />
+        <Footer />
+      </main>
     </ThemeProvider>
   )
 }
