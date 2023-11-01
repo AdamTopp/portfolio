@@ -98,7 +98,6 @@ export const Title = styled.span<{ active?: boolean }>`
 `;
 
 export const Text = styled.div<{ active?: boolean }>`
-    margin-bottom: 16px;
     font-size: 1.3rem;
     font-family: ${theme.fonts.family.Playfair};
     color: ${(props) => props.active ? theme.colors.white[80] : theme.colors.white[20]};
