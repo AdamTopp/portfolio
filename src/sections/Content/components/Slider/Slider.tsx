@@ -50,13 +50,13 @@ const Slider = () => {
       <ImageWrapper>
         <ImageGrid>
           <ImageSection ref={imageWrapperRef} onMouseEnter={() => setHoverIndex(0)}>
-            <Image active={hoverIndex === 0}/>
+            <Image active={hoverIndex === 0} angle='-2deg'/>
           </ImageSection>
           <ImageSection onMouseEnter={() => setHoverIndex(1)}>
-            <Image active={hoverIndex === 1}/>
+            <Image active={hoverIndex === 1} angle='3deg'/>
           </ImageSection>
           <ImageSection onMouseEnter={() => setHoverIndex(2)}>
-            <Image active={hoverIndex === 2}/>
+            <Image active={hoverIndex === 2} angle='-1deg'/>
           </ImageSection>
           <Descritpion onMouseEnter={() => setHoverIndex(0)}>
             <Title active={hoverIndex === 0}>Style</Title>

@@ -18,7 +18,7 @@ const theme = {
       0: '#120F14',
     }
   },
-  maxSize: '1600px'
+  maxSize: '1800px'
 };
 
 export default theme;

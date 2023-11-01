@@ -4,7 +4,7 @@ import theme from "../../../../theme";
 export const Grid = styled.div`
     width: 100%;
     max-width: ${theme.maxSize};
-    padding: 35rem 8rem;
+    padding: 33rem 8rem;
 
     display: grid;
     grid-template-columns: auto auto;
