@@ -1,104 +1,106 @@
-import styled, {css, keyframes} from "styled-components";
+import styled, { keyframes } from "styled-components";
+import theme from "../../../../theme";
 
-const slide = keyframes`
-    from {
-        transform: translateX(-100%);
-    }
+
+const scroll = keyframes`
     to {
-        transform: translateX(0);
+        transform: translate(calc(-50% - 1rem));
     }
 `
 
-export const SliderWrapper = styled.div`
+export const Wrapper = styled.div`
+    position: relative;
+    align-self: flex-start;
+    width: 100%;
+    max-width: 100vw;
+    margin-bottom: 33rem;
+`;
+
+export const SliderWrapper = styled.div<{ imageSize: number }>`
     position: absolute;
+    overflow: hidden;
+    transform: translateY(-50%);
+    top: ${(props) => props.imageSize / 2}px;
+    z-index: 0;
+`;
+
+export const SliderItem = styled.li`
+    white-space: nowrap;
+    font-size: 7rem;
+    font-family: ${theme.fonts.family.PathwayGothic};
+    -webkit-text-stroke: 1.5px ${theme.colors.red};
+    text-transform: uppercase;
+    color: transparent;
+    cursor: default;
+`;
+
+export const SliderInner = styled.ul`
+    display: flex;
+    gap: 2rem;
+    width: fit-content;
+    padding-block: 1rem;
+    animation: ${scroll} 20s linear infinite;
+`;
+
+export const ImageWrapper = styled.div`
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    z-index: 1;
+`;
+
+export const ImageGrid = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-column-gap: 7vw;
+    width: 100%;
+    max-width: ${theme.maxSize};
+    padding: 0 8rem;
+`;
+
+export const ImageSection = styled.div`
     display: flex;
     justify-content: center;
-    height: 100%;
     align-items: center;
-    font-size: min(8rem, 8vw);
-    width: 100vw;
-    overflow: hidden;
-    white-space: nowrap;
+    border-bottom: solid 2px ${theme.colors.white[20]};
+    margin-bottom: 16px;
+    aspect-ratio: 3/4;
 `;
 
-export const MarqueeItem = styled.div`
-    display: inline-block;
-    animation: ${slide} 5s linear infinite;
-    text-transform: uppercase;
-    color: rgba(0, 0, 0, 0);
-    -webkit-text-stroke: 1.5px #a02121;
+export const Image = styled.div<{ active: boolean, angle: string }>`
+    width: 75%;
+    aspect-ratio: 3/4;
+    background-color: #da91917b;
+    transition: all 400ms ease-out;
+    transform: ${(props) => props.active ? 'scale(1)' : 'scale(0.9)'};
+    opacity: ${(props) => props.active ? 100 : 0};
+    rotate: ${({active, angle}) => active ? angle : '0deg'};
 `;
 
-export const Title = styled.div`
-    font-size: min(2.6rem, 2.6vw);
+export const Descritpion = styled.div`
+    display: flex;
+    flex-direction: column;
+    padding: 0.1rem;
 `;
 
-export const Description = styled.div`
-    font-size: min(1.8rem, 1.8vw);
+export const Title = styled.span<{ active?: boolean }>`
+    width: fit-content;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid ${({ active }) => active ? theme.colors.red : 'transparent'};
+    font-size: min(2.6rem, 3vw);
+    font-family: ${theme.fonts.family.Playfair};
+    color: ${(props) => props.active ? theme.colors.white[100] : theme.colors.white[20]};
+    transition: all 250ms;
+    cursor: default;
 `;
 
-export const Row = styled.div`
-    box-sizing: border-box;
-    width: 100%;
-    overflow: hidden;
-`;
-
-export const GridItem = styled.div<{ cardActive: boolean, codeSection?: boolean }>`
-    transition: all 300ms;
-    z-index: 1;
-    color: grey;
-    ${(props) => props.cardActive && css`
-        color: white;
-    `}
-
-    @media (max-width: 1024px) {
-        ${(props) => props.codeSection && css`
-            order: 3;
-        `}
-    }
-`;
-
-export const PhotoWrapper = styled(GridItem)`
-    background-color: #ff7f509e;
-    aspect-ratio: 6/7;
-    ${(props) => props.cardActive && css`
-        & {
-            background-color: green;
-        }
-    `}
-`;
-
-export const Grid = styled.div`
-    display: grid;
-    grid-template-columns: min(15vw, 500px) min(15vw, 500px) min(15vw, 500px);
-    justify-content: space-around;
-    height: 100%;
-    position: relative;
-    padding: 0 15vw;
-
-    @media (max-width: 1024px) {
-        grid-template-columns: min(90vw, 500px);
-        grid-row-gap: 60px;
-        ${Title} {
-            font-size: 2.6rem;
-        }
-
-        ${Description} {
-            font-size: 1.8rem;
-        }
-    }
-`;
-
-export const PhotoGrid = styled(Grid)`
-    @media (max-width: 1024px) {
-        padding: 0;
-        justify-content: flex-start;
-        ${PhotoWrapper} {
-            display: none;
-        }
-
-        ${SliderWrapper} {
-            position: initial;
-        }
-    }
+export const Text = styled.div<{ active?: boolean }>`
+    font-size: 1.3rem;
+    font-family: ${theme.fonts.family.Playfair};
+    color: ${(props) => props.active ? theme.colors.white[80] : theme.colors.white[20]};
+    transition: color 250ms;
+    cursor: default;
 `;
