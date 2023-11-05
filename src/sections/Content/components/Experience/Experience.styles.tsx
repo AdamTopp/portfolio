@@ -19,7 +19,7 @@ export const TextSection = styled.section`
 `;
 
 export const Photo = styled.div`
-    width: 22%;
+    height: 400px;
     aspect-ratio: 3/4;
     background-color: #120f1421;
 `;
