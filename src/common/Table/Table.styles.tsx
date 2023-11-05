@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import theme from "../../theme";
 
 
@@ -21,9 +21,13 @@ export const Column = styled.td<{ dark: boolean }>`
     text-overflow: ellipsis;
 
     &:nth-child(1) {
-        overflow: visible;
-        width: fit-content;
-        padding-right: 6rem;
+        ${({dark}) => dark ? css`
+            overflow: visible;
+            width: fit-content;
+            min-width: 9rem;  
+        ` : css`
+            width: fit-content;
+        `}
     }
 
     &:last-child {
@@ -37,7 +41,7 @@ export const Row = styled.tr<{ dark: boolean }>`
     padding: 0 0.5rem;
     align-items: center;
     border-bottom: 2px solid ${({ dark }) => dark ? theme.colors.white[0] : theme.colors.white[20]};
-    opacity: ${({ dark }) => dark ? '45%' : '100%'};
+    opacity: ${({ dark }) => dark ? '35%' : '100%'};
     transition: all 100ms;
     cursor: pointer;
 

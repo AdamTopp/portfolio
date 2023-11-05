@@ -12,7 +12,6 @@ export const Title = styled.div`
     font-size: 4.5rem;
     color: ${theme.colors.white[100]};
     font-family: ${theme.fonts.family.Playfair};
-    /* border-bottom: 2px solid ${theme.colors.white[20]}; */
     padding: 1rem 0;
 `;
 
