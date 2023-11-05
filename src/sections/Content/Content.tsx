@@ -1,6 +1,6 @@
 import { Wrapper } from './Content.styles'
 import Introduction from './components/Introduction/Introduction'
-// import Experience from './components/Experience/Experience'
+import Experience from './components/Experience/Experience'
 import Slider from './components/Slider/Slider'
 import Technologies from './components/Technologies/Technologies'
 
@@ -10,7 +10,7 @@ function Content() {
       <Introduction />
       <Slider />
       <Technologies />
-      {/* <Experience /> */}
+      <Experience />
     </Wrapper>
   )
 }
