@@ -58,14 +58,6 @@ const Technologies = () => {
           </Section>
         </SectionWrapper>
       </Wrapper>
-      <Table data={[
-              { columns: ['React'] },
-              { columns: ['Typescript'] },
-              { columns: ['Styled Components'] },
-              { columns: ['React Testing Library'] },
-              { columns: ['Material UI'] },
-              ]}
-            />
       <SectionEnd />
     </>
   )

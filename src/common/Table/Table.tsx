@@ -7,21 +7,24 @@ interface Row {
 
 interface Props {
     data: Row[],
+    darkTheme?: boolean,
 }
 
 const Table = (props: Props) => {
 
   return (
     <Wrapper>
+        <tbody>
         {props.data.map((row) => (
-            <Row>
+            <Row dark={props.darkTheme || false}>
                 {row.columns.map((col) => (
-                    <Column>
+                    <Column dark={props.darkTheme || false}>
                         {col}
                     </Column>
                 ))}
             </Row>
         ))}
+        </tbody>
     </Wrapper>
   )
 }
