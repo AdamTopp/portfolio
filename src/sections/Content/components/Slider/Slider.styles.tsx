@@ -89,7 +89,6 @@ export const Descritpion = styled.div`
 export const Title = styled.span<{ active?: boolean }>`
     width: fit-content;
     margin-bottom: 1rem;
-    border-bottom: 2px solid ${({ active }) => active ? theme.colors.red : 'transparent'};
     font-size: min(2.6rem, 3vw);
     font-family: ${theme.fonts.family.Playfair};
     color: ${(props) => props.active ? theme.colors.white[100] : theme.colors.white[20]};
@@ -100,7 +99,7 @@ export const Title = styled.span<{ active?: boolean }>`
 export const Text = styled.div<{ active?: boolean }>`
     font-size: 1.3rem;
     font-family: ${theme.fonts.family.Playfair};
-    color: ${(props) => props.active ? theme.colors.white[80] : theme.colors.white[20]};
+    color: ${(props) => props.active ? theme.colors.white[60] : theme.colors.white[20]};
     transition: color 250ms;
     cursor: default;
 `;
