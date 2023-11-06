@@ -1,9 +1,11 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import theme from "../../../../theme";
 
 export const Wrapper = styled.div`
     background-color: ${theme.colors.red};
     width: 100%;
+    position: relative;
+    align-self: flex-start;
 `;
 
 export const ContentWrapper = styled.div`
@@ -63,4 +65,35 @@ export const SubContent = styled.div`
     margin-top: 1rem;
     padding-top: 1rem;
     border-top: 2px solid ${theme.colors.white[0]};
+`;
+
+export const Header = styled.div`
+    position: relative;
+`;
+
+export const HeaderTitle = styled.div`
+    position: absolute;
+    top: 50%;
+    font-size: 20rem;
+    color: ${theme.colors.white[0]};
+    font-family: ${theme.fonts.family.Anton};
+    transform: translate(-50%, -50%);
+    left: 50%;
+    text-transform: uppercase;
+    cursor: default;
+    pointer-events: none;
+    background-color: ${theme.colors.red};
+    line-height: 0.9;
+
+    &::before {
+        content: 'Experience';
+        font-size: 2.5rem;
+        color: white;
+        font-family: ${theme.fonts.family.Playfair};
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translateY(-100%);
+        background-color: ${theme.colors.red};
+    }
 `;

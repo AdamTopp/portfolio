@@ -1,11 +1,20 @@
 import React from 'react'
-import { Wrapper, ContentWrapper, TextSection, Text, Subtitle, Title, Content, SubContent, Photo } from './Experience.styles'
+import { Wrapper, ContentWrapper, TextSection, Text, Subtitle, Title, Content, SubContent, Photo, Header, HeaderSlider, HeaderTitle } from './Experience.styles'
 import Table from '../../../../common/Table/Table';
+import Slider from './Slider/Slider';
 
 function Experience() {
 
   return (
     <Wrapper>
+      <Header>
+        <Slider duration={50} text='Experience'/>
+        <Slider duration={30} text='Experience'/>
+        <Slider duration={60} text='Experience'/>
+        <Slider duration={40} text='Experience'/>
+        <Slider duration={50} text='Experience'/>
+        <HeaderTitle>Experience</HeaderTitle>
+      </Header>
       <ContentWrapper>
         <TextSection>
           <Text>
@@ -30,6 +39,7 @@ function Experience() {
           darkTheme
         />
       </ContentWrapper>
+      <Slider duration={30} text='Work with me'/>
     </Wrapper>
   )
 }
