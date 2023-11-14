@@ -1,5 +1,5 @@
 import React from 'react'
-import { Arrows, Content, Description, DescriptionSection, DescriptionWrapper, Pill, SubTitle, Title, Wrapper } from './footer.styles'
+import { Arrows, Content, Description, DescriptionSection, DescriptionWrapper, Link, LinkTitle, Links, Pill, Section, SubTitle, Title, Wrapper } from './footer.styles'
 import Arrow from './Arrow'
 
 function Footer() {
@@ -23,6 +23,19 @@ function Footer() {
         <Pill>+48 794 690 194</Pill>
         <Pill>adamtoppmayer@gmail.com</Pill>
       </DescriptionSection>
+      <Links>
+        <Section>
+          <LinkTitle>Created by</LinkTitle>
+          <Link>Adam Toppmayer</Link>
+        </Section>
+        <Section>
+          <LinkTitle>Socials</LinkTitle>
+          <Link href='https://www.youtube.com/'>LinkedIn</Link>
+          <Link href='https://www.youtube.com/'>Instagram</Link>
+          <Link href='https://www.youtube.com/'>Facebook</Link>
+          <Link href='https://www.youtube.com/'>Twitter</Link>
+        </Section>
+      </Links>
     </Wrapper>
   )
 }

@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
     width: 100%;
     background-color: ${theme.colors.white[0]};
     align-items: center;
-    padding: 5rem 0;
+    padding: 5rem 4rem;
     display: flex;
     flex-direction: column;
 `;
@@ -54,12 +54,12 @@ export const SubTitle = styled(Title)`
 `;
 
 export const DescriptionSection = styled.section`
-display: flex;
+    display: flex;
     width: 100%;
     max-width: ${theme.maxSize};
     margin-top: 3rem;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
 `;
 
 export const Description = styled.div`
@@ -79,7 +79,34 @@ export const Pill = styled.div`
     font-size: 1.2rem;
     font-family: ${theme.fonts.family.Alike};
     color: ${theme.colors.white[40]};
-    padding: 1rem 1.5rem;
+    padding: 1rem 2rem;
     border-radius: 5rem;
     white-space: nowrap;
+`;
+
+export const Links = styled.div`
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: ${theme.maxSize};
+    margin-top: 6rem;
+`;
+
+export const LinkTitle = styled.div`
+    font-family: ${theme.fonts.family.Playfair};
+    font-size: 1.4rem;
+    color: ${theme.colors.white[100]};
+    margin-bottom: 0.5rem;
+`;
+
+export const Link = styled.a`
+    font-family: ${theme.fonts.family.Alike};
+    font-size: 1.2rem;
+    color: ${theme.colors.white[40]};
+    margin-right: 2rem;
+    text-decoration: none;
+`;
+
+export const Section = styled.section`
+    
 `;
