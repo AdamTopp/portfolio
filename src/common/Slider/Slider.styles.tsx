@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import theme from "../../../../theme";
+import theme from "../../theme";
 
 
 const scroll = keyframes`
@@ -7,14 +7,6 @@ const scroll = keyframes`
         transform: translate(calc(-50% - 1rem));
     }
 `
-
-export const Wrapper = styled.div`
-    position: relative;
-    align-self: flex-start;
-    width: 100%;
-    max-width: 100vw;
-    margin-bottom: 33rem;
-`;
 
 export const SliderWrapper = styled.div<{ imageSize: number }>`
     position: absolute;
@@ -89,7 +81,6 @@ export const Descritpion = styled.div`
 export const Title = styled.span<{ active?: boolean }>`
     width: fit-content;
     margin-bottom: 1rem;
-    border-bottom: 2px solid ${({ active }) => active ? theme.colors.red : 'transparent'};
     font-size: min(2.6rem, 3vw);
     font-family: ${theme.fonts.family.Playfair};
     color: ${(props) => props.active ? theme.colors.white[100] : theme.colors.white[20]};
@@ -100,7 +91,7 @@ export const Title = styled.span<{ active?: boolean }>`
 export const Text = styled.div<{ active?: boolean }>`
     font-size: 1.3rem;
     font-family: ${theme.fonts.family.Playfair};
-    color: ${(props) => props.active ? theme.colors.white[80] : theme.colors.white[20]};
+    color: ${(props) => props.active ? theme.colors.white[60] : theme.colors.white[20]};
     transition: color 250ms;
     cursor: default;
 `;

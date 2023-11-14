@@ -1,16 +1,16 @@
 import { Wrapper } from './Content.styles'
 import Introduction from './components/Introduction/Introduction'
-// import Experience from './components/Experience/Experience'
-import Slider from './components/Slider/Slider'
-// import Technologies from './components/Technologies/Technologies'
+import Experience from './components/Experience/Experience'
+import Offer from './components/Offer/Offer'
+import Technologies from './components/Technologies/Technologies'
 
 function Content() {
   return (
     <Wrapper>
       <Introduction />
-      <Slider />
-      {/* <Technologies />
-      <Experience /> */}
+      <Offer />
+      <Technologies />
+      <Experience />
     </Wrapper>
   )
 }

@@ -1,26 +1,18 @@
 import React, { useRef, useState } from 'react'
-import { Descritpion, Text, ImageSection, Image, ImageGrid, ImageWrapper, SliderInner, SliderItem, SliderWrapper, Title, Wrapper } from './Slider.styles'
+import { Descritpion, Text, ImageSection, Image, ImageGrid, ImageWrapper, Title, Wrapper } from './Offer.styles'
+import Slider from '../../../../common/Slider/Slider';
 
-interface SliderItemGroupProps {
-  n: number;
-}
-
-const Slider = () => {
-  const sliderItemRef = useRef<HTMLElement>();
+const Offer = () => {
   const imageWrapperRef = useRef<HTMLElement>();
-  const [sliderItemCount, setSliderItemCount] = useState(0);
   const [imageSize, setImageSize] = useState(0);
   const [hoverIndex, setHoverIndex] = useState(0);
 
   const handleResize = () => {
-    const windowWidth = window.innerWidth;
-    const itemWidth = sliderItemRef.current?.offsetWidth;
     const itemHeight = imageWrapperRef.current?.offsetHeight;
-    if (itemWidth && itemHeight) {
-      setSliderItemCount(Math.ceil(windowWidth / itemWidth));
+    if (itemHeight) {
       setImageSize(itemHeight);
     } else {
-      setSliderItemCount(0);
+      setImageSize(0);
     }
   };
 
@@ -30,23 +22,9 @@ const Slider = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const SliderItemGroup = (props: SliderItemGroupProps) => (
-    <>
-      {[...Array(props.n >= 0 ? props.n : 0)].map(() => (
-        <SliderItem>What can I offer?</SliderItem>
-      ))}
-    </>
-  );
-
   return (
     <Wrapper>
-      <SliderWrapper imageSize={imageSize}>
-        <SliderInner>
-          <SliderItem ref={sliderItemRef}>What can I offer?</SliderItem>
-          <SliderItemGroup n={sliderItemCount - 1}/>
-          <SliderItemGroup n={sliderItemCount}/>
-        </SliderInner>
-      </SliderWrapper>
+      <Slider imageSize={imageSize}/>
       <ImageWrapper>
         <ImageGrid>
           <ImageSection ref={imageWrapperRef} onMouseEnter={() => setHoverIndex(0)}>
@@ -82,4 +60,4 @@ const Slider = () => {
   )
 }
 
-export default Slider;
+export default Offer;

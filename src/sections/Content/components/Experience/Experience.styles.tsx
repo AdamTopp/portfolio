@@ -1,81 +1,99 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+import theme from "../../../../theme";
 
-export const Grid = styled.div`
-    display: grid;
+export const Wrapper = styled.div`
+    background-color: ${theme.colors.red};
     width: 100%;
-    padding: 15vw 5vw 6vw 5vw;
-    box-sizing: border-box;
-    grid-template-columns: auto auto;
-    grid-gap: 5vw;
+    position: relative;
+    align-self: flex-start;
 `;
 
-export const Column = styled.div`
+export const ContentWrapper = styled.div`
+    max-width: 1500px;
+    padding: 0 8rem;
+    margin: 12rem auto;
 `;
 
-export const Content = styled.div`
-    font-size: min(1.5rem, 1.5vw);
-    text-wrap: balance;
+export const TextSection = styled.section`
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10rem;
 `;
 
-export const Description = styled(Content)`
-    color: #9A9A9A;
-    font-size: min(1.3rem, 1.3vw);
+export const Photo = styled.div`
+    height: 400px;
+    aspect-ratio: 3/4;
+    background-color: #120f1421;
+`;
+
+export const Text = styled.div`
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
 `;
 
 export const Title = styled.div`
-    font-size: min(4rem, 4vw);
-    text-align: end;
-    color: white;
+    font-size: 4rem;
+    font-family: ${theme.fonts.family.Anton};
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    letter-spacing: -0.15rem;
+    line-height: 1;
 `;
 
-export const Subtitle = styled(Title)`
+export const Subtitle = styled.div`
+    font-size: 2.2rem;
+    font-family: ${theme.fonts.family.Playfair};
+    color: ${theme.colors.white[0]};;
+    opacity: 35%;
+    text-transform: uppercase;
 `;
 
-export const Wrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    padding: 0 5vw;
-    margin: 0 auto;
-    gap: 1vw;
+export const Content = styled.div`
+    font-size: 1.5rem;
+    font-family: ${theme.fonts.family.Alike};
+    color: ${theme.colors.white[0]};
+    opacity: 75%;
 `;
 
-export const Row = styled.div`
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
-    border-left: 3px solid grey;
-    padding-left: 20px;
-    box-sizing: border-box;
+export const SubContent = styled.div`
+    font-family: ${theme.fonts.family.Alike};
+    color: ${theme.colors.white[0]};
+    opacity: 35%;
+    font-size: 1.2rem;
+    max-width: 70%;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid ${theme.colors.white[0]};
 `;
 
-export const LeftGroup = styled.div`
-    display: flex;
-    align-items: center;
-    height: 100%;
+export const Header = styled.div`
+    position: relative;
 `;
 
-export const Position = styled.div`
-    color: grey;
-    font-size: min(1.8rem, 1.8vw);
-`;
+export const HeaderTitle = styled.div`
+    position: absolute;
+    top: 50%;
+    font-size: 20rem;
+    color: ${theme.colors.white[0]};
+    font-family: ${theme.fonts.family.Anton};
+    transform: translate(-50%, -50%);
+    left: 50%;
+    text-transform: uppercase;
+    cursor: default;
+    pointer-events: none;
+    background-color: ${theme.colors.red};
+    line-height: 0.9;
 
-export const Company = styled.div`
-    color: grey;
-    font-size: min(1.8rem, 1.8vw);
-`;
-
-export const Year = styled.div`
-    box-sizing: border-box;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px 30px;
-    font-size: min(2rem, 2vw);
-    border: 2px solid grey;
-    border-radius: 2px;
-    color: grey;
-    margin-right: 40px;
+    &::before {
+        content: 'Experience';
+        font-size: 2.5rem;
+        color: white;
+        font-family: ${theme.fonts.family.Playfair};
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translateY(-100%);
+        background-color: ${theme.colors.red};
+    }
 `;
