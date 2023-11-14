@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import { SliderInner, SliderItem, SliderWrapper } from './Slider.styles'
 
 interface SliderItemGroupProps {

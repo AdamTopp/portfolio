@@ -1,4 +1,3 @@
-import React from 'react'
 import { Wrapper, ContentWrapper, TextSection, Text, Subtitle, Title, Content, SubContent, Photo, Header, HeaderSlider, HeaderTitle } from './Experience.styles'
 import Table from '../../../../common/Table/Table';
 import Slider from './Slider/Slider';

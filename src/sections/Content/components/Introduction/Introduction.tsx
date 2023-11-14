@@ -1,4 +1,3 @@
-import React from 'react'
 import { ContentWrapper, Grid, Content, NameWrapper, Hello, Footer, Surname, NameContainer } from './Introduction.styles'
 
 function Introduction() {

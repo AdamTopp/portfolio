@@ -1,4 +1,3 @@
-import React from 'react'
 import { Section, SectionDescription, SectionEnd, SectionTitle, SectionWrapper, Subtitle, Title, Wrapper } from './Technologies.styles';
 import Table from '../../../../common/Table/Table';
 

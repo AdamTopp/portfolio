@@ -1,5 +1,5 @@
-import React, { useRef, useState } from 'react'
-import { SliderInner, SliderItem, SliderWrapper, Wrapper } from './Slider.styles'
+import { useRef, useState } from 'react'
+import { SliderInner, SliderItem, SliderWrapper } from './Slider.styles'
 
 interface SliderItemGroupProps {
   n: number;

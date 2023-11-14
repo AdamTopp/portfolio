@@ -1,4 +1,3 @@
-import React from 'react'
 import { Arrows, Content, Description, DescriptionSection, DescriptionWrapper, Link, LinkTitle, Links, Pill, Section, SubTitle, Title, Wrapper } from './footer.styles'
 import Arrow from './Arrow'
 

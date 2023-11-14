@@ -1,4 +1,3 @@
-import React from 'react'
 import { Row, Column, Wrapper } from './Table.styles';
 
 interface Row {

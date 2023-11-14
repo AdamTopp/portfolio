@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import { Descritpion, Text, ImageSection, Image, ImageGrid, ImageWrapper, Title, Wrapper } from './Offer.styles'
 import Slider from '../../../../common/Slider/Slider';
 

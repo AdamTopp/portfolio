@@ -1,4 +1,3 @@
-import React from 'react'
 import { Content, Description, Grid, Name, Title, Wrapper } from './Introduction.styles'
 
 function Introduction() {
