@@ -17,6 +17,8 @@ const Slider = (props: Props) => {
   const [sliderItemCount, setSliderItemCount] = useState(0);
 
   const handleResize = () => {
+    console.log('Resize!')
+
     const windowWidth = window.innerWidth;
     const itemWidth = sliderItemRef.current?.offsetWidth;
     if (itemWidth) {

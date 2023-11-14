@@ -46,11 +46,11 @@ export const Row = styled.tr<{ dark: boolean }>`
     cursor: pointer;
 
     &:hover {
-        border-bottom: 2px solid ${({ dark }) => dark ? theme.colors.white[100] : theme.colors.white[60]};
+        border-bottom: 2px solid ${({ dark }) => dark ? theme.colors.white[80] : theme.colors.white[60]};
         opacity: 100%;
 
         ${Column} {
-            color: ${({ dark }) => dark ? theme.colors.white[100] : theme.colors.white[80]};
+            color: ${({ dark }) => dark ? theme.colors.white[80] : theme.colors.white[80]};
         }
     }
 `;
