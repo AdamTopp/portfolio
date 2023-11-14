@@ -1,4 +1,4 @@
-import { Wrapper, ContentWrapper, TextSection, Text, Subtitle, Title, Content, SubContent, Photo, Header, HeaderSlider, HeaderTitle } from './Experience.styles'
+import { Wrapper, ContentWrapper, TextSection, Text, Subtitle, Title, Content, SubContent, Photo, Header, HeaderTitle } from './Experience.styles'
 import Table from '../../../../common/Table/Table';
 import Slider from './Slider/Slider';
 

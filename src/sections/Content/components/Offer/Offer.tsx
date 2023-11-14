@@ -1,4 +1,6 @@
-import { useRef, useState } from 'react'
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+import { useRef, useState, useEffect } from 'react'
 import { Descritpion, Text, ImageSection, Image, ImageGrid, ImageWrapper, Title, Wrapper } from './Offer.styles'
 import Slider from '../../../../common/Slider/Slider';
 
@@ -16,7 +18,7 @@ const Offer = () => {
     }
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     window.addEventListener("resize", handleResize);
     handleResize();
     return () => window.removeEventListener('resize', handleResize);

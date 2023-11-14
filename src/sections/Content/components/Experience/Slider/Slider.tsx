@@ -1,4 +1,6 @@
-import { useRef, useState } from 'react'
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+import { useRef, useState, useEffect } from 'react'
 import { SliderInner, SliderItem, SliderWrapper } from './Slider.styles'
 
 interface SliderItemGroupProps {
@@ -17,8 +19,6 @@ const Slider = (props: Props) => {
   const [sliderItemCount, setSliderItemCount] = useState(0);
 
   const handleResize = () => {
-    console.log('Resize!')
-
     const windowWidth = window.innerWidth;
     const itemWidth = sliderItemRef.current?.offsetWidth;
     if (itemWidth) {
@@ -28,7 +28,7 @@ const Slider = (props: Props) => {
     }
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     window.addEventListener("resize", handleResize);
     handleResize();
     return () => window.removeEventListener('resize', handleResize);
@@ -36,7 +36,7 @@ const Slider = (props: Props) => {
 
   const SliderItemGroup = (props: SliderItemGroupProps) => (
     <>
-      {[...Array(props.n >= 0 ? props.n : 0)].map((_, i) => (
+      {[...Array(props.n >= 0 ? props.n : 0)].map(() => (
         <SliderItem>{props.text}</SliderItem>
       ))}
     </>

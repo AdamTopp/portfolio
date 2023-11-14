@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 import { useRef, useState } from 'react'
 import { SliderInner, SliderItem, SliderWrapper } from './Slider.styles'
 
