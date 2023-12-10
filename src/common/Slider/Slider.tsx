@@ -1,6 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import { SliderInner, SliderItem, SliderWrapper } from './Slider.styles'
 
 interface SliderItemGroupProps {
@@ -25,7 +25,7 @@ const Slider = (props: Props) => {
     }
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     window.addEventListener("resize", handleResize);
     handleResize();
     return () => window.removeEventListener('resize', handleResize);

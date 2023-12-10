@@ -14,8 +14,8 @@ const Table = (props: Props) => {
   return (
     <Wrapper>
         <tbody>
-        {props.data.map((row) => (
-            <Row dark={props.darkTheme || false}>
+        {props.data.map((row, i) => (
+            <Row dark={props.darkTheme || false} key={i}>
                 {row.columns.map((col) => (
                     <Column dark={props.darkTheme || false}>
                         {col}
